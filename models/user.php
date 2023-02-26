@@ -39,6 +39,8 @@ class User
       "
 SET
     name=:name, email=:email, password=:password";
+
+// $query="INSERT INTO user(id,name,email,password) VALUES (null,:name,:email,:password)";
     $newquery = filter_var($query, FILTER_SANITIZE_STRING);
     $stmt = $this->conn->prepare($newquery);
 
@@ -56,6 +58,7 @@ SET
     if ($stmt->execute()) {
       return true;
     }
+
 
     return false;
   }

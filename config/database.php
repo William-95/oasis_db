@@ -19,6 +19,7 @@ class Database
         $this->pass
       );
       $this->conn->exec("set names utf8");
+      
     } catch (PDOException $e) {
       echo "Errore: " . $e->getMessage();
       die();
@@ -27,3 +28,4 @@ class Database
     return $this->conn;
   }
 }
+
