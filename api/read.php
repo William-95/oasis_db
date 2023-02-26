@@ -1,13 +1,14 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: *");
-// header("Content-Type: application/json; charset=UTF-8");
-header("Access-Control-Allow-Methods: GET");
-	
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: *');
+header('Access-Control-Allow-Methods:  POST, PUT, GET');
+header("Content-Type: application/json; charset=UTF-8");
+
 include_once "..\config\database.php";
 include_once "..\models\user.php";
 
 $database= new Database();
+
 $db =$database->getConnection();
 
 $user=new User($db);
