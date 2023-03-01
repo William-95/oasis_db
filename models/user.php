@@ -57,8 +57,9 @@ SET
     $stmt->bindParam(":password", $this->password);
     $stmt->bindParam(":confirm_password", $this->confirm_password);
 
-
+   
     if ($stmt->execute()) {
+      
       return true;
     }
 

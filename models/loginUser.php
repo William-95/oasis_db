@@ -6,7 +6,7 @@ class LoginUser
   // proprietà user
   
   public $name;
-  public $email;
+  // public $email;
   public $password;
  
 
@@ -37,3 +37,4 @@ class LoginUser
   }
 
 }
+
