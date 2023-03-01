@@ -34,6 +34,7 @@ if (
     //503 servizio non disponibile
     http_response_code(503);
     echo json_encode(["message" => "Impossibile creare Lutente."]);
+  
   }
 }
 
